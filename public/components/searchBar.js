@@ -14,14 +14,23 @@ class SearchBar extends Component {
     this.setState({term});
   }
 
+  onSend (name, ID) {
+    console.log('onSend was called!');
+    console.log('this is name:', name);
+    console.log('this is ID:', ID);
+  }
+
   onSubmit (e) {
     e.preventDefault();
     var artist = this.state.term;
     var finalArtist = artist.replace(' ', '+')
     console.log('this is searched:', finalArtist);
-    axios.get('https://api.spotify.com/v1/search?q=hans+zimmer&type=artist')
+    var that = this;
+    axios.get('https://api.spotify.com/v1/search?q=' + finalArtist + '&type=artist')
       .then(function(response) {
-        console.log(response.data);
+        var id = response.data.artists.items[0].id;
+        var name = response.data.artists.items[0].name;
+        that.onSend(name, id);
       })
 
   }
