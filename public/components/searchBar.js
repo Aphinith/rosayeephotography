@@ -8,15 +8,20 @@ class SearchBar extends Component {
 
     this.state = { term: 'Enter Artist Name Here'};
     this.onSubmit = this.onSubmit.bind(this);
-    this.onSend = this.onSend.bind(this);
+    this.onSendInfo = this.onSendInfo.bind(this);
+    this.onSendTracks = this.onSendTracks.bind(this);
   }
 
   onInputChange (term) {
     this.setState({term});
   }
 
-  onSend (name, ID, image) {
-    this.props.artistID(name, ID, image);
+  onSendInfo (name, ID, image) {
+    this.props.artistInfo(name, ID, image);
+  }
+
+  onSendTracks (tracks) {
+    this.props.trackList(tracks);
   }
 
   onSubmit (e) {
@@ -25,15 +30,23 @@ class SearchBar extends Component {
     var finalArtist = artist.replace(' ', '+')
     console.log('this is searched:', finalArtist);
     var that = this;
+    var id, name, image;
     axios.get('https://api.spotify.com/v1/search?q=' + finalArtist + '&type=artist')
       .then(function(response) {
-        var id = response.data.artists.items[0].id;
-        var name = response.data.artists.items[0].name;
-        var image = 'http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png/revision/latest?cb=20150708082716'
+        id = response.data.artists.items[0].id;
+        name = response.data.artists.items[0].name;
+        image = 'http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png/revision/latest?cb=20150708082716'
         if (response.data.artists.items[0].images.length > 1) {
           image = response.data.artists.items[0].images[0].url
         }
-        that.onSend(name, id, image);
+        that.onSendInfo(name, id, image);
+      })
+      .then(function() {
+        axios.get('https://api.spotify.com/v1/artists/' + id + '/top-tracks?country=US')
+        .then(function(response) {
+          var tracks = response.data.tracks;
+          that.onSendTracks(tracks);
+        })
       })
 
   }
@@ -50,22 +63,6 @@ class SearchBar extends Component {
         </div>
       )
   }
-
-
-  // render () {
-  //   return (
-  //     <div className="search-bar">
-  //       <input 
-  //         value = {this.state.term}
-  //         onChange={event => this.onInputChange(event.target.value)} />
-  //     </div>
-  //   );
-  // }
-
-  // onInputChange (term) {
-  //   this.setState({term});
-  //   this.props.onSearchTermChange(term);
-  // }
 
 }
 

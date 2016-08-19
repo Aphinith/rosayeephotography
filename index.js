@@ -10,14 +10,19 @@ class HelloWorld extends Component {
 
     this.state = { name: null,
                    id: null,
-                   image: null 
+                   image: null,
+                   tracks: [] 
       };
     this.artistSearch = this.artistSearch.bind(this);
+    this.trackList = this.trackList.bind(this);
   }
 
   artistSearch(name, id, image) {
     this.setState({name, id, image})
-    console.log('this.state:', this.state);
+  }
+
+  trackList(tracks) {
+    this.setState({tracks})
   }
 
   render() {
@@ -25,7 +30,8 @@ class HelloWorld extends Component {
     return (
       <div>
         <div>
-          <SearchBar artistID={this.artistSearch}/>
+          <SearchBar artistInfo={this.artistSearch}
+                     trackList={this.trackList}/>
         </div>
         <div>
           <ArtistProfile profileInfo={this.state}/>
