@@ -24,13 +24,19 @@ class ArtistTracks extends Component {
 
     return (
       <div>
-        <img src={this.state.tracks[0].album.images[1].url} />
-        <div>
-          <audio controls>
-            <source src={this.state.tracks[0].preview_url} type="audio/mpeg" />
-          </audio>
-          {this.state.tracks[0].preview_url}
-        </div>
+        {this.state.tracks.map(function(track){
+          return <div key={track.id}>
+                  <image src={track.album.images[1].url} />
+                  <div>
+                    <audio controls>
+                      <source src={track.preview_url} type="audio/mpeg" />
+                    </audio>
+                  </div>
+                  <div>
+                    Track Name: {track.name}
+                  </div>
+                 </div>
+        })}
       </div>
       )
   }
