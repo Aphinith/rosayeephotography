@@ -29,7 +29,10 @@ class SearchBar extends Component {
       .then(function(response) {
         var id = response.data.artists.items[0].id;
         var name = response.data.artists.items[0].name;
-        var image = response.data.artists.items[0].images[0].url;
+        var image = 'http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png/revision/latest?cb=20150708082716'
+        if (response.data.artists.items[0].images.length > 1) {
+          image = response.data.artists.items[0].images[0].url
+        }
         that.onSend(name, id, image);
       })
 
