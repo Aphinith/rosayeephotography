@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 import SearchBar from './public/components/searchBar.js'
 import ArtistProfile from './public/components/artistProfile.js'
+import ArtistTracks from './public/components/artistTracks.js'
 
 class HelloWorld extends Component {
   constructor (props) {
@@ -25,6 +26,9 @@ class HelloWorld extends Component {
         </div>
         <div>
           <ArtistProfile />
+        </div>
+        <div> 
+          <ArtistTracks />
         </div>
       </div>
     )
