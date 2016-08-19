@@ -8,6 +8,7 @@ class SearchBar extends Component {
 
     this.state = { term: 'Enter Artist Name Here'};
     this.onSubmit = this.onSubmit.bind(this);
+    this.onSend = this.onSend.bind(this);
   }
 
   onInputChange (term) {
@@ -16,8 +17,9 @@ class SearchBar extends Component {
 
   onSend (name, ID) {
     console.log('onSend was called!');
-    console.log('this is name:', name);
-    console.log('this is ID:', ID);
+    // console.log('this is name:', name);
+    // console.log('this is ID:', ID);
+    this.props.artistID(name, ID);
   }
 
   onSubmit (e) {
