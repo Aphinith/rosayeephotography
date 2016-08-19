@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 class ArtistTracks extends Component {
 
@@ -25,8 +24,13 @@ class ArtistTracks extends Component {
 
     return (
       <div>
-        An artist exists!
-        {this.state.tracks[0].uri}
+        <img src={this.state.tracks[0].album.images[1].url} />
+        <div>
+          <audio controls>
+            <source src={this.state.tracks[0].preview_url} type="audio/mpeg" />
+          </audio>
+          {this.state.tracks[0].preview_url}
+        </div>
       </div>
       )
   }
