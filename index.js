@@ -37,7 +37,7 @@ class HelloWorld extends Component {
           <ArtistProfile profileInfo={this.state}/>
         </div>
         <div> 
-          <ArtistTracks />
+          <ArtistTracks trackList={this.state.tracks}/>
         </div>
       </div>
     )
