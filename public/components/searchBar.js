@@ -16,7 +16,6 @@ class SearchBar extends Component {
   }
 
   onSend (name, ID, image) {
-    console.log('onSend was called!');
     this.props.artistID(name, ID, image);
   }
 

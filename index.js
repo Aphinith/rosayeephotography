@@ -28,7 +28,7 @@ class HelloWorld extends Component {
           <SearchBar artistID={this.artistSearch}/>
         </div>
         <div>
-          <ArtistProfile />
+          <ArtistProfile profileInfo={this.state}/>
         </div>
         <div> 
           <ArtistTracks />
