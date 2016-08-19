@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 class SearchBar extends Component {
 
@@ -19,7 +19,11 @@ class SearchBar extends Component {
     var artist = this.state.term;
     var finalArtist = artist.replace(' ', '+')
     console.log('this is searched:', finalArtist);
-    
+    axios.get('https://api.spotify.com/v1/search?q=hans+zimmer&type=artist')
+      .then(function(response) {
+        console.log(response.data);
+      })
+
   }
 
   render() {
