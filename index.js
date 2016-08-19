@@ -8,13 +8,16 @@ class HelloWorld extends Component {
   constructor (props) {
     super (props);
 
-    this.state = { id: null};
+    this.state = { name: null,
+                   id: null,
+                   image: null 
+      };
     this.artistSearch = this.artistSearch.bind(this);
   }
 
-  artistSearch(name, id) {
-    this.setState({id})
-    console.log('this.state.id:', this.state.id);
+  artistSearch(name, id, image) {
+    this.setState({name, id, image})
+    console.log('this.state:', this.state);
   }
 
   render() {

@@ -15,11 +15,9 @@ class SearchBar extends Component {
     this.setState({term});
   }
 
-  onSend (name, ID) {
+  onSend (name, ID, image) {
     console.log('onSend was called!');
-    // console.log('this is name:', name);
-    // console.log('this is ID:', ID);
-    this.props.artistID(name, ID);
+    this.props.artistID(name, ID, image);
   }
 
   onSubmit (e) {
@@ -32,7 +30,8 @@ class SearchBar extends Component {
       .then(function(response) {
         var id = response.data.artists.items[0].id;
         var name = response.data.artists.items[0].name;
-        that.onSend(name, id);
+        var image = response.data.artists.items[0].images[0].url;
+        that.onSend(name, id, image);
       })
 
   }
