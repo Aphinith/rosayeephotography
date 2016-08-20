@@ -1,6 +1,6 @@
 # My-artists
 
-> Search for artists and sample their top hits!
+> Search for artists via the Spotify Web API and sample their top hits!
 
 ## Team
 
