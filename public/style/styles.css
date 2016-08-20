@@ -188,5 +188,9 @@
 }
 
 .track-title {
-
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font: 400 47px/1.0 'Just Another Hand', Helvetica, sans-serif;
+  color: #f57b0c;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
