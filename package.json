@@ -7,6 +7,7 @@
   "description": "A quick and easy way to search for artists",
   "main": "server.js",
   "scripts": {
+    "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "start": "node server.js"
   },
   "repository": {
