@@ -128,14 +128,14 @@
 /******************************************************************************************/
 
 
-#Container {
+#container {
   width: 95%;
   height: 200px;
   margin: auto;
   padding: 10px;
   text-align: center;
 }
-#Artist-Profile {
+#artist-profile {
   width: 50%;
   height: 200px;
   float: left;
@@ -143,19 +143,19 @@
   margin-right: 30px;
 }
 
-#Artist-Tracks {
+#artist-tracks {
   margin-left: 10%;
   height: 750px;
   overflow-y: auto;
 }
 
-.Clear {
+.clear {
   clear: both;
 }
 
 /*** Artist Profile Image ***/
 
-.Artist-Image {
+.artist-image {
   width: 500px;
   height: auto;
   background-color: rgba(0,0,0,.5);
@@ -167,7 +167,7 @@
 
 /*** Artist Name ***/
 
-.Artist-Name {
+.artist-name {
   text-align: center;
   margin-top: 15px;
   width: 100%;
@@ -175,4 +175,18 @@
   color: #f57b0c;
   text-shadow: 2px 4px 9px #6b0000, 0px 5px 0px #ef0303, 0px 7px 0px #ff0909, 0px 9px 0px #ef0404, 3px 8px 15px rgba(234, 8, 8, 0.1), 3px 8px 5px rgba(0,0,0,0.3);
 }
+
+/*** Track Image ***/
+.track-image {
+  width: 300px;
+  height: auto;
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 8px 8px 7px rgba(0,0,0,.5);
+  border-radius: 25px;
+  border-color: black;
+  margin-bottom: 5px;
+}
+
+.track-title {
+
 }
