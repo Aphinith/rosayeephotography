@@ -54,11 +54,10 @@ class SearchBar extends Component {
   render() {
     return (
         <div className="search-bar">
-          <form onSubmit={this.onSubmit}>
-            <input type="text" 
-            placeholder="Enter Artist Name Here"
-            onChange={event => this.onInputChange(event.target.value)}/>
-            <input type="submit" value="search"/>
+          <form id="search-form_3" onSubmit={this.onSubmit}>
+            <input className="search_3" type="text" placeholder="Enter Artist Name Here"
+                   onChange={event => this.onInputChange(event.target.value)}/>
+            <input className="search_4"type="submit" value="search"/>
           </form>
         </div>
       )

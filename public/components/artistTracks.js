@@ -16,9 +16,7 @@ class ArtistTracks extends Component {
     console.log('this is now this.state.tracks:', this.state.tracks);
     if (this.state.tracks === null || this.state.tracks.length === 0) {
       return (
-        <div>
-          There are no artists searched
-        </div>
+        <div></div>
         )
     }
 
