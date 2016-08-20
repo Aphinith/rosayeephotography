@@ -1,8 +1,16 @@
 
+#instructions {
+  margin-top: 20px;
+  height: 45px;
+  text-align: center;
+  font: 400 80px/1.0 'Just Another Hand', Helvetica, sans-serif;
+  color: #f57b0c;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 /******************************************************************************************/
 /************* SEARCH BAR *****************************************************************/
 /******************************************************************************************/
-
 
 .search-bar {
   text-align: center;
@@ -127,6 +135,7 @@
 /************* ARTISTS PROFILE / ARTISTS TRACKS *******************************************/
 /******************************************************************************************/
 
+/*** To split artist profile and artist tracks into two separate columns ***/
 
 #container {
   width: 95%;
@@ -156,7 +165,7 @@
 /*** Artist Profile Image ***/
 
 .artist-image {
-  width: 500px;
+  width: 475px;
   height: auto;
   background-color: rgba(0,0,0,.5);
   box-shadow: 8px 8px 7px rgba(0,0,0,.5);
@@ -177,6 +186,7 @@
 }
 
 /*** Track Image ***/
+
 .track-image {
   width: 300px;
   height: auto;
@@ -186,6 +196,9 @@
   border-color: black;
   margin-bottom: 5px;
 }
+
+
+/*** Track Title ***/
 
 .track-title {
   margin-top: 5px;
