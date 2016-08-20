@@ -33,11 +33,14 @@ class HelloWorld extends Component {
           <SearchBar artistInfo={this.artistSearch}
                      trackList={this.trackList}/>
         </div>
-        <div>
-          <ArtistProfile profileInfo={this.state}/>
-        </div>
-        <div> 
-          <ArtistTracks trackList={this.state.tracks}/>
+        <div id="Container">
+          <div id="Artist-Profile">
+            <ArtistProfile profileInfo={this.state}/>
+          </div>
+          <div id="Artist-Tracks"> 
+            <ArtistTracks trackList={this.state.tracks}/>
+          </div>
+          <div className="Clear"></div>
         </div>
       </div>
     )

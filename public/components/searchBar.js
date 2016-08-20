@@ -37,7 +37,7 @@ class SearchBar extends Component {
         name = response.data.artists.items[0].name;
         image = 'http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png/revision/latest?cb=20150708082716'
         if (response.data.artists.items[0].images.length > 1) {
-          image = response.data.artists.items[0].images[0].url
+          image = response.data.artists.items[0].images[1].url
         }
         that.onSendInfo(name, id, image);
       })

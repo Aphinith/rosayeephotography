@@ -23,8 +23,8 @@ class ArtistProfile extends Component {
     return (
 
       <div>
-        <img src={this.state.image} />
-        <div className="ArtistName">
+        <img className="Artist-Image" src={this.state.image} />
+        <div className="Artist-Name">
           {this.state.name}
         </div>
       </div>
