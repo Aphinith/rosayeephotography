@@ -44,7 +44,7 @@ Open a new tab in the terminal and run server:
 node server.js
 ```
 
-Navigate to localhost:3000 on your browser
+Navigate to localhost:3000 on your browser and enjoy :)
 
 ### Roadmap
 
