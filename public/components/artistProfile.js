@@ -12,6 +12,7 @@ class ArtistProfile extends Component {
     };
   }
 
+  //use function to update state with searched items and set state with new search items
   componentWillReceiveProps(nextProps) {
     this.setState({name: nextProps.profileInfo.name,
                    id: nextProps.profileInfo.id,

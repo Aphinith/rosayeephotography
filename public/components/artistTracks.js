@@ -8,6 +8,7 @@ class ArtistTracks extends Component {
     this.state = { tracks: null };
   }
 
+  //update state with new searched tracks
   componentWillReceiveProps(nextProps) {
     this.setState({tracks: nextProps.trackList})
   }

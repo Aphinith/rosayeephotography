@@ -17,10 +17,12 @@ class HelloWorld extends Component {
     this.trackList = this.trackList.bind(this);
   }
 
+  //create function to set state to have artist name, id, and image url
   artistSearch(name, id, image) {
     this.setState({name, id, image})
   }
 
+  //create function to set state of tracks
   trackList(tracks) {
     this.setState({tracks})
   }
