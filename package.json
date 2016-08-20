@@ -9,6 +9,10 @@
   "scripts": {
     "start": "node server.js"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Aphinith/My_artists"
+  },
   "dependencies": {
     "axios": "^0.13.1",
     "react": "^0.14.7",
