@@ -1,6 +1,6 @@
 # My-artists
 
-> Search for artists via the Spotify Web API and sample their top hits!
+> Search for artists via the Spotify Web API and sample their top hits! Click here(https://myartists989.herokuapp.com/) to get started!
 
 ## Team
 
@@ -49,7 +49,6 @@ Navigate to localhost:3000 on your browser and enjoy :)
 ### Roadmap
 
 View the project roadmap [here](https://github.com/Aphinith/My_artists/commits/master)
-
 
 ## Contributing
 
