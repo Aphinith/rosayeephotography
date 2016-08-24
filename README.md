@@ -1,6 +1,6 @@
 # My-artists
 
-> Search for artists via the Spotify Web API and sample their top hits! Click here(https://myartists989.herokuapp.com/) to get started!
+> Search for artists via the Spotify Web API and sample their top hits! [Click here](https://myartists989.herokuapp.com/) to get started!
 
 ## Team
 
