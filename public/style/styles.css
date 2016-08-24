@@ -15,7 +15,10 @@ html {
   margin-top: 20px;
   height: 45px;
   text-align: center;
-  font: 400 80px/1.0 'Just Another Hand', Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 55px;
+  font-weight: 900;
+  font-family: fantasy;
   color: #f57b0c;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
