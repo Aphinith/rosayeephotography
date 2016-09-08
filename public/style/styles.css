@@ -13,7 +13,7 @@ html {
 
 #instructions {
   margin-top: 20px;
-  height: 45px;
+  height: auto;
   text-align: center;
   font-style: italic;
   font-size: 50px;
@@ -36,7 +36,7 @@ html {
 #search-form_3 {
   background: #e1e1e1; /* Fallback color for non-css3 browsers */
   width: 500px;
-  margin: 50px auto;
+  margin: 10px auto 50px auto;
 
   /* Gradients */
   background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
