@@ -34,10 +34,8 @@ class HelloWorld extends Component {
         <div id="instructions">
           Enter an artist name below and sample their top hits!
         </div>
-        <div>
-          <SearchBar artistInfo={this.artistSearch}
-                     trackList={this.trackList}/>
-        </div>
+        <SearchBar artistInfo={this.artistSearch}
+                   trackList={this.trackList}/>
         <div id="container">
           <div id="artist-profile">
             <ArtistProfile profileInfo={this.state}/>
