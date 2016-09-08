@@ -32,7 +32,7 @@ class HelloWorld extends Component {
     return (
       <div>
         <div id="instructions">
-          Enter an artist name below and sample their top hits!
+          Enter an artist's name below and sample their top hits!
         </div>
         <SearchBar artistInfo={this.artistSearch}
                    trackList={this.trackList}/>
