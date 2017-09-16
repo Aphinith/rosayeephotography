@@ -14,6 +14,7 @@ class SearchBar extends Component {
 
   //function to handle value of text as it is typed in search bar and set state to value of text
   onInputChange (term) {
+    console.log('changing');
     this.setState({term});
   }
 
@@ -35,9 +36,12 @@ class SearchBar extends Component {
     var finalArtist = artist.replace(' ', '+')
     var that = this;
     var id, name, image;
+    console.log('onsubmit function called');
     //send GET request to spotify API via axios
     axios.get('https://api.spotify.com/v1/search?q=' + finalArtist + '&type=artist')
+    // axios.get('/get_token')
       .then(function(response) {
+        console.log('this is response: ', response);
         id = response.data.artists.items[0].id;
         name = response.data.artists.items[0].name;
         image = 'http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png/revision/latest?cb=20150708082716'
@@ -50,7 +54,9 @@ class SearchBar extends Component {
       .then(function() {
         //send another GET request to get tracks of artist
         axios.get('https://api.spotify.com/v1/artists/' + id + '/top-tracks?country=US')
+        // axios.get('https://accounts.spotify.com/authorize?client_id=71f2d2d9145d4f649ef8afafd89c8f5a&redirect_uri=http:%2F%2Flocalhost:3000%2Fcallback%2F&response_type=token')
         .then(function(response) {
+          console.log('this is response: ', response);
           var tracks = response.data.tracks;
           //invoke onSendTracks function to send tracks to parent component
           that.onSendTracks(tracks);

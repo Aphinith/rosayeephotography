@@ -1,8 +1,12 @@
 var express = require('express');
 var path = require('path');
 var httpProxy = require('http-proxy');
-var publicPath = path.resolve(__dirname, 'public');
+var bodyParser = require('body-parser');
+var multiparty = require('connect-multiparty'),
+  mulitpartyMiddleware = multiparty();
+var get_token = require('./server/get_token');
 
+var publicPath = path.resolve(__dirname, 'public');
 // We need to add a configuration to our proxy server,
 // as we are now proxying outside localhost
 var isProduction = process.env.NODE_ENV === 'production';
@@ -13,7 +17,9 @@ var proxy = httpProxy.createProxyServer({
 });
 var app = express();
 
+app.use(bodyParser.json());
 app.use(express.static(publicPath));
+// app.use('/get_token', get_token);
 
 // If you only want this for development, you would of course
 // put it in the "if" block below
@@ -35,4 +41,5 @@ proxy.on('error', function(e) {
 app.listen(port, function () {
   console.log('Server running on port ' + port)
 });
+
 

@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import SearchBar from './public/components/searchBar.js'
 import ArtistProfile from './public/components/artistProfile.js'
 import ArtistTracks from './public/components/artistTracks.js'
+import { Router, Route } from 'react-router'
 
 class HelloWorld extends Component {
   constructor (props) {

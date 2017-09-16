@@ -15,6 +15,7 @@ class ArtistTracks extends Component {
 
   render() {
     console.log('this is now this.state.tracks:', this.state.tracks);
+    console.log('we need to see this change!');
     if (this.state.tracks === null || this.state.tracks.length === 0) {
       return (
         <div></div>
