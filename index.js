@@ -11,7 +11,7 @@ class Main extends Component {
 
     return (
       <div>
-        This will be the main home page!!!!!
+        This will be the main home page! Testing automatic deploy!
       </div>
     )
   }
