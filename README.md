@@ -1,6 +1,6 @@
-# My-artists
+# Rosa Yee Photography
 
-> Search for artists via the Spotify Web API and sample their top hits! [Click here](https://myartists989.herokuapp.com/) to get started!
+> Website for my wife!
 
 ## Team
 
@@ -44,12 +44,3 @@ Open a new tab in the terminal and run server:
 node server.js
 ```
 
-Navigate to localhost:3000 on your browser and enjoy :)
-
-### Roadmap
-
-View the project roadmap [here](https://github.com/Aphinith/My_artists/commits/master)
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
