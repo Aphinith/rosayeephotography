@@ -1,18 +1,19 @@
 {
   "engines": {
-    "node": "5.10.0"
+    "node": "6.2.2"
   },
-  "name": "Artists",
-  "version": "0.0.0",
-  "description": "A quick and easy way to search for artists",
+  "name": "RosaYeePhotography",
+  "version": "1.0.0",
+  "description": "Website for Rosa Yee's Photography Business",
   "main": "server.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aphinith/My_artists"
+    "url": "https://github.com/Aphinith/rosayeephotography"
   },
   "dependencies": {
     "axios": "^0.13.1",
