@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import NavigationBar from './public/components/navBar.js'
 // import { Router, Route } from 'react-router'
 
 class Main extends Component {
@@ -10,8 +11,8 @@ class Main extends Component {
   render() {
 
     return (
-      <div>
-        This will be the main home page! Testing automatic deploy!
+      <div className="nav-bar-container">
+        <NavigationBar />
       </div>
     )
   }
