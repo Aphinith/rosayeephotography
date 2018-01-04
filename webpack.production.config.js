@@ -40,7 +40,7 @@ var config = {
 
   resolve: {
       extensions: ['.js', '.jsx', '.css', '.scss', '.json'],
-      modulesDirectories: [
+      modules: [
         'node_modules'
       ]        
   },
