@@ -39,7 +39,7 @@ var config = {
   },
 
   resolve: {
-      extensions: ['', '.js', '.jsx', '.css', '.scss', '.json'],
+      extensions: ['.js', '.jsx', '.css', '.scss', '.json'],
       modulesDirectories: [
         'node_modules'
       ]        
