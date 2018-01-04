@@ -1,21 +1,10 @@
 import React, { Component } from 'react'
+import { HashRouter } from 'react-router-dom'
 import { render } from 'react-dom'
-import NavigationBar from './public/components/navBar.js'
-// import { Router, Route } from 'react-router'
+import App from './public/components/app.js'
 
-class Main extends Component {
-  constructor (props) {
-    super (props);
-  }
-
-  render() {
-
-    return (
-      <div className="nav-bar-container">
-        <NavigationBar />
-      </div>
-    )
-  }
-}
-
-render(<Main/>, document.getElementById('app'))
+render(
+  <HashRouter>
+    <App />
+  </HashRouter>, 
+  document.getElementById('app'));
